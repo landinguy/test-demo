@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hi,landing guy!</title>
+</head>
+<body>
+<h2>welcome</h2>
+
+<script>
+    <!-- Generator 用法 -->
+    function* genFun() {
+        yield "hello";
+        yield "world";
+        return "ending";
+    }
+
+    const gen = genFun();//返回一个迭代器
+    console.log(gen.next(), gen.next(), gen.next(), gen.next())
+</script>
+</body>
+</html>
