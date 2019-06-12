@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hi,landing guy!</title>
+</head>
+<body>
+ES6 学习
+</body>
+<script>
+    /* Proxy用法 */
+    // let proxy = new Proxy({}, {
+    //     get: (target, p) => {
+    //         return 18
+    //     }
+    // })
+    // console.log(proxy.name)
+    // console.log(proxy.time)
+    // console.log(proxy.title)
+
+    /* Generator用法 */
+    // function* print() {
+    //     yield getResult(5)
+    //     yield getResult(10)
+    //     return getResult(20)
+    // }
+    //
+    // function getResult(param) {
+    //     let result = 1
+    //     let initValue = param
+    //     for (; param > 1; param--) {
+    //         result *= param
+    //     }
+    //     return `${initValue}的阶乘是 ${result}`
+    // }
+    //
+    // let it = print()//调用generator函数返回一个Iterator对象
+    // console.log(it.next(), it.next(), it.next(), it.next())
+
+    // function* gen(x) {
+    //     let y = yield x + 2
+    //     return y
+    // }
+    //
+    // let g = gen(1)
+    // console.log(g.next(), g.next()) // { value: 3, done: false } { value: undefined, done: true }
+    //
+    // //next()方法中的参数会将上一次yield的返回值替换，此处即将y的值替换成true
+    // console.log(g.next(), g.next(true)) // { value: 3, done: false } { value: true, done: true }
+
+    /* async用法 */
+    async function print() {
+        // throw new Error('出错了')
+        return "hello world"
+    }
+
+    //调用async方法将返回一个Promise对象
+    print().then(res => console.log(res)).catch(err => console.log(err))
+
+</script>
+</html>
